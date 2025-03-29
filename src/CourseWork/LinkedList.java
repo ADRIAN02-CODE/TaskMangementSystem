@@ -18,13 +18,6 @@ class TaskLinkedList {
         }
     }
 
-    public Task searchTask(int id) {
-        for (Task task : tasks) {
-            if (task.id == id) return task;
-        }
-        return null;
-    }
-
     public void displayTasks() {
         for (Task task : tasks) {
             System.out.println(task);
