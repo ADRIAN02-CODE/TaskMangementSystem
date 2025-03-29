@@ -1,21 +1,17 @@
 package CourseWork;
 
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class TaskPriorityQueue {
-    private PriorityQueue<Task> queue;
-
-    public TaskPriorityQueue() {
-        queue = new PriorityQueue<>(Comparator.comparing(t -> t.priority));
-    }
+class TaskQueue {
+    private Queue<Task> queue = new LinkedList<>();
 
     public void addTask(Task task) {
-        queue.offer(task);
+        queue.offer(task); // Add to the end (enqueue)
     }
 
     public Task processTask() {
-        return queue.poll();
+        return queue.isEmpty() ? null : queue.poll(); // Remove from the front (dequeue)
     }
 
     public boolean isEmpty() {

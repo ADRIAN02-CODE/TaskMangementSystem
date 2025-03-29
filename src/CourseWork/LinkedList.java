@@ -10,7 +10,12 @@ class TaskLinkedList {
     }
 
     public void removeTask(int id) {
-        tasks.removeIf(task -> task.id == id);
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).id == id) {
+                tasks.remove(i);
+                break; // Exit after removing the first match
+            }
+        }
     }
 
     public Task searchTask(int id) {
