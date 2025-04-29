@@ -30,7 +30,7 @@ public class TaskManagementSystem {
             if (task != null) {
                 task.markCompleted();
                 System.out.println("Processed: " + task);
-                taskStack.push(task); // Add to stack for undo
+                taskStack.push(task);                               // this will use stack for undo
             }
         }
 
