@@ -12,12 +12,14 @@ public class TaskManagementSystem {
         Task task3 = new Task(3, "Going to church", "Low");
 
 
+
         taskList.addTask(task1);                                    // this will add tasks to both the list and queue
         taskList.addTask(task2);
         taskList.addTask(task3);
         taskQueue.addTask(task1);
         taskQueue.addTask(task2);
         taskQueue.addTask(task3);
+
 
 
         System.out.println("All Tasks:");                       // this will display all tasks in the list
